@@ -5,11 +5,12 @@
 -----------------------------------------------------------*/
 
 Route::group([
-    'middleware' => ['auth'],
+    'middleware' => [],
     'prefix' => 'painel'
 ], function(){
     Route::get('/', function(){ return view('painel.home'); })->name('panel.home');
     Route::get('/cronograma', function(){ return view('painel.cronograma-aulas'); });
+    //Route::get('/disciplina', function(){ return view('painel.disciplina'); });
     Route::get('/login', function(){ return view('painel.login'); })->name('panel.login');
 });
 
