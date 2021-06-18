@@ -47,7 +47,7 @@
                                 <label class="mb-0" for="telefone">Telefone</label>
                                 <input type="text" name="telefone" value="{{ old('telefone') }}"
                                     class="form-control @error('telefone') is-invalid @enderror" id="telefone"
-                                    placeholder="Telefone">
+                                    placeholder="Telefone" onkeyup="mascara('(##)# ####-####',this,event,false)">
                     
                                 @error('telefone')
                                     <span class="invalid-feedback" role="alert">
@@ -55,11 +55,6 @@
                                     </span>
                                 @enderror
                             </div>
-                            <script>
-                                document.getElementById('matricula').addEventListener('click', function(){
-                                    $('#telefone').mask('(99)9 9999-9999');
-                                });
-                            </script>
                         </div>
                         
                         <div class="row mb-2">
